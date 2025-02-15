@@ -10,8 +10,11 @@ const expense = document.getElementById("expense");
 const add_expense = document.getElementById("add_expense");
 const addmoney = document.getElementById("addmoney");
 const addMoneyModal = document.getElementById("addMoneyModal");
+const moneyInput = document.getElementById("moneyInput");
+const closeModal = document.getElementById("closeModal");
+const submitMoney = document.getElementById("submitMoney");
 
-let tk; 
+let tk=0; 
 
 get_name();
 
@@ -39,7 +42,7 @@ function get_name() {
         }
 
         card_name.innerText = name;
-        card_balance.innerText = tk;
+        card_balance.innerText =Number(tk);
 
         remove_login_card();
         add_expences(); 
@@ -75,6 +78,26 @@ function add_expences() {
 addmoney.addEventListener("click",function(e){
   e.preventDefault();
   addMoneyModal.classList.remove("hidden");
+  addMoneyModal.classList.add("flex");
+
+  submitMoney.addEventListener("click",function(e){
+   e.preventDefault()
+   tk=Number(tk)+Number(moneyInput.value);
+   card_balance.innerText = tk; 
+   addMoneyModal.classList.add("hidden");
+  addMoneyModal.classList.remove("flex"); 
+})
+
+closeModal.addEventListener("click",function(e){
+ e.preventDefault()
+ addMoneyModal.classList.add("hidden");
+  addMoneyModal.classList.remove("flex"); 
+
+})
+
+
+
+
 
 
 
