@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+    <!-- for the name bar -->
+    <div id="login_card" class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg flex flex-col justify-center items-center"> 
+        <div class="text flex flex-col justify-center items-center mt-20">
+            <h3 class="text-2xl font-bold">Welcome to Expense Tracker</h3>
+            <h2 class="font-semibold pt-10">What should we call you? Enter your name to continue:</h2>
+        </div>
+        <div class="form_button w-full mt-5">
+            <input id="username" type="text" placeholder="name" class="bg-blue-600 bg-opacity-30 placeholder:text-black placeholder:px-5 py-3 rounded w-full">
+            <h2 class="font-semibold pl-2 mt-10 pb-4">Enter your current balance:</h2>
+            <input id="balance" type="number" placeholder="balance" class="bg-blue-600 bg-opacity-30 placeholder:text-black placeholder:px-5 py-3 rounded w-full">
+            <div class="flex justify-center items-center">
+                <button id="namesubmit" class="bg-blue-600 bg-opacity-60 rounded-2xl mx-5 py-1 px-3 hover:bg-opacity-70 text-white m-10">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- for the main section -->
+    <div id="main_section" class="hidden max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <div class="card text rounded-2xl shadow-2xl shadow-black h-52 bg-blue-400 relative"> 
+        <div class="name bg-black bg-opacity-70 text-white px-7 py-3 top-7 absolute flex justify-between items-center w-full text-xl font-semibold gap-x-5">
+            <h2 id="card_name" class="opacity-100">Your Name</h2>
+            <button id="addmoney" class="rounded-3xl bg-white bg-opacity-20 text-white px-5 text-center  md:font-semibold hover:bg-opacity-25 ml-auto">
+                Add Money
+            </button>
+        </div>
+        <div id="card_balance" class="name rounded-3xl bg-white bg-opacity-20 text-black px-20 py-3 mt-28 mx-10 absolute text-xl font-semibold">
+            <h2>$0.00</h2>
+        </div>
+   
+    
+        </div>
+      
+        <div class="expencess">
+            <div class="cardex mt-20 bg-white shadow bg-opacity-50 p-10">
+                <h3 class="text-2xl font-semibold">Add Expense</h3>
+                <div class="input flex flex-col">
+                    <input id="title" class="bg-blue-400 bg-opacity-30 rounded-2xl py-2 my-5 text-center text-black placeholder-black" type="text" placeholder="Expense Title">
+                    <input id="expense" class="bg-blue-400 bg-opacity-30 rounded-2xl py-2 text-center text-black placeholder-black" type="number" placeholder="Amount">
+                </div>
+                <div class="submit flex-col md:flex-row flex justify-between items-center my-5">
+                    <button id="add_expense" class="bg-blue-600 bg-opacity-60 rounded-2xl py-1 px-3 hover:bg-opacity-70 text-white m-5">Add Expense</button>
+                    <button class="bg-red-500 bg-opacity-60 rounded-2xl py-1 px-8 hover:bg-opacity-70 text-white">History</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="addMoneyModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+          <h2 class="text-xl font-semibold mb-4">Add Money</h2>
+          <input id="moneyInput" type="number" placeholder="Enter amount" class="w-full bg-gray-100 p-2 rounded mb-4">
+          <div class="flex justify-end">
+              <button id="closeModal" class="bg-gray-500 text-white px-4 py-2 rounded mr-2">Cancel</button>
+              <button id="submitMoney" class="bg-blue-600 text-white px-4 py-2 rounded">Add</button>
+          </div>
+      </div>
+  </div>
+
+    <script src="script.js"></script>  
+</body>
+</html>
