@@ -48,7 +48,7 @@
                 </div>
                 <div class="submit flex-col md:flex-row flex justify-between items-center my-5">
                     <button id="add_expense" class="bg-blue-600 bg-opacity-60 rounded-2xl py-1 px-3 hover:bg-opacity-70 text-white m-5">Add Expense</button>
-                    <button class="bg-red-500 bg-opacity-60 rounded-2xl py-1 px-8 hover:bg-opacity-70 text-white">History</button>
+                    <button id="historybutton" class="bg-red-500 bg-opacity-60 rounded-2xl py-1 px-8 hover:bg-opacity-70 text-white">History</button>
                 </div>
             </div>
         </div>
@@ -63,6 +63,24 @@
               <button id="submitMoney" class="bg-blue-600 text-white px-4 py-2 rounded">Add</button>
           </div>
       </div>
+  </div>
+  <div id="historydiv" class=" history hidden fixed inset-0 bg-black bg-opacity-50  justify-center items-center ">
+       <div id="historybox" class="historybox bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+        <div class="hbox hidden bg-blue-500 bg-opacity-25 rounded-2xl m-5 flex justify-center items-center p-3 ">
+            <h3 id="ht"  ></h3>
+            <p id="hp" "></p>
+
+
+        </div>
+     <!-- <div class="flex justify-end">
+            <button id="closehistory" class="bg-gray-500 text-white px-4 py-2 rounded mr-2">Cancel</button>
+            
+        </div> -->
+
+
+       </div>     
+
+
   </div>
 
     <script src="script.js"></script>  
