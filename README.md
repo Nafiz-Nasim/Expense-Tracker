@@ -29,7 +29,7 @@ A simple and interactive Expense Tracker application built using HTML, CSS (via 
 
 ## Demo
 
-Here are some screenshots of the project in action:
+Here are some screenshots of the project in action:https://incomparable-paletas-fcb359.netlify.app/
 
 ### Initial Login Screen:
 ![Initial Screen](https://github.com/Nafiz-Nasim/Expense-Tracker/blob/main/Screenshot%202025-06-16%20210504.png)
